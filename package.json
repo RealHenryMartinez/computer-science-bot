@@ -1,5 +1,19 @@
 {
-  "dependencies": {
+  "name": "computer-science-bot",
+  "description": "cool",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "devDependencies": {
     "discord.js": "^14.14.1"
+  },
+  "scripts": {
+    "start": "node bot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.4.5"
   }
 }
