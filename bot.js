@@ -4,6 +4,7 @@ const client = new Client({
    GatewayIntentBits.Guilds,
    GatewayIntentBits.GuildMessages,
    GatewayIntentBits.GuildMembers,
+   GatewayIntentBits.MessageContent
  ],
 });
 import dotenv from "dotenv"
@@ -13,9 +14,11 @@ client.on("ready", () => {
  console.log(`Logged in as ${client.user.tag}!`)
 })
 
-client.on("message", msg => {
+client.on("messageCreate", (msg) => {
  if (msg.content === "ping") {
    msg.reply("pong");
+ } else if (msg.content === "cat"){
+    msg.reply({ files: [{ attachment: './assets/bigmeatcat.png' }] })
  }
 })
 
